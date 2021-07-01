@@ -10,9 +10,37 @@ package ejercicioBridge;
 public class Cliente {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
-		
+
+		String estudiantes[] = { "juan", "pedro", "pablo", "messi" };
+
+		sistemaEscuela escuela = new sistemaEscuela(new Facebook());
+		sistemaColegio colegio = new sistemaColegio(new Whatsapp());
+		sistemaUniversidad universidad = new sistemaUniversidad(new Twitter());
+
+		escuela.setEstudiantes(estudiantes);
+		escuela.setCapacidad(500);
+		escuela.setNombre("Amor de Dios");
+		escuela.setRequisitos("no ser ateo xd");
+
+		escuela.show();
+		escuela.integrar();
+
+		colegio.setEstudiantes(estudiantes);
+		colegio.setCapacidad(450);
+		colegio.setNombre("Amoretti");
+		colegio.setRequisitos("ninguno");
+
+		colegio.show();
+		colegio.integrar();
+
+		universidad.setEstudiantes(estudiantes);
+		universidad.setCapacidad(700);
+		universidad.setNombre("UPB");
+		universidad.setRequisitos("notas de excelencia");
+
+		universidad.show();
+		universidad.integrar();
+
 	}
 
 }

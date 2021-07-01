@@ -4,6 +4,21 @@ public class sistemaColegio implements ISistemas {
 	String nombre, estudiantes[], requisitos;
 	int capacidad;
 
+	IRed red;
+
+	public IRed getRed() {
+		return red;
+	}
+
+	public void setRed(IRed red) {
+		this.red = red;
+	}
+
+	public sistemaColegio(IRed redSocial) {
+		super();
+		this.red = redSocial;
+	}
+
 	public String getNombre() {
 		return nombre;
 	}
@@ -46,4 +61,11 @@ public class sistemaColegio implements ISistemas {
 		System.out.println("requisitos: " + requisitos);
 		System.out.println("capacidad: " + capacidad);
 	}
+
+	@Override
+	public void integrar() {
+		System.out.println("Integrando...");
+		red.show();
+	}
+
 }
