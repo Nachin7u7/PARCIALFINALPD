@@ -17,8 +17,10 @@ public class Cliente {
 		SantaCruz sc = new SantaCruz("Santa Cruz", "Andrés Ibáñez", "calor", 16000, 7000);
 
 		Turista turista = new Turista("juan", 12000, 10924658);
-		
-		
+
+		lp.aceptar(turista);
+		cbba.aceptar(turista);
+		sc.aceptar(turista);
 
 	}
 

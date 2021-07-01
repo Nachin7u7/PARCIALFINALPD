@@ -44,19 +44,31 @@ public class Turista implements IVisit {
 		lp.show();
 		System.out.println("Dinero del turista: " + dinero);
 		int gasto = (int) (Math.random() * dinero);
-		System.out.println("");
+		setDinero(dinero - gasto);
+		System.out.println("Gasto en La Paz: " + gasto);
+		System.out.println("Dinero del turista despues del gasto: " + dinero);
 	}
 
 	@Override
 	public void visit(Cochabamba cbba) {
-		// TODO Auto-generated method stub
-
+		System.out.println();
+		System.out.println("Visitando Cochabamba...");
+		cbba.show();
+		System.out.println("Dinero del turista: " + dinero);
+		int gasto = (int) (cbba.getNumeroHabitantes() * 0.1);
+		System.out.println("Gasto en Cochabamba: " + gasto);
+		System.out.println("Dinero del turista despues del gasto: " + dinero);
 	}
 
 	@Override
 	public void visit(SantaCruz sc) {
-		// TODO Auto-generated method stub
-
+		System.out.println();
+		System.out.println("Visitando SantaCruz...");
+		sc.show();
+		System.out.println("Dinero del turista: " + dinero);
+		int gasto = (int) (sc.getNumeroHabitantes() * 0.5);
+		System.out.println("Gasto en Cochabamba: " + gasto);
+		System.out.println("Dinero del turista despues del gasto: " + dinero);
 	}
 
 }
